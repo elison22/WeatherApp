@@ -1,8 +1,8 @@
 <?php
 
-require ('Emailer');
+require ('Emailer.php');
 
-public class WeatherEmailer {
+class WeatherEmailer {
 
 	public function __construct()
 	{

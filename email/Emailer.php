@@ -1,6 +1,6 @@
 <?php
 
-public class Emailer {
+class Emailer {
 
 	public function __construct() 
 	{
