@@ -9,6 +9,8 @@ class Emailer {
 
 	public function send_email($to,$from,$subject,$body,$is_html=false) 
 	{
+		if(trim($to) === '') return;
+		
 		$headers = "From: {$from}\r\n" .
 				   "Reply-To:{$from}\r\n" .
 				   'X-Mailer: PHP/' . phpversion();

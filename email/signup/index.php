@@ -8,20 +8,20 @@
 <body>
 
   <form action="signup.php" method='POST'>
-    <label for='name'>Name</label>
+    <!-- <label for='name'>Name</label>
     <input id='name' type='text' name='username'/>
     <br/>
-    
+     -->
     <label for='email'>Email</label>
     <input id='email' type='text' name='email'/>
     <br/>
     
-    <p>Services (please select all you would like to be notified for)</p>
-    <label for='rain'>50% chance of rain or higher</label>
+    <p>Services (please select all for which you would like to be notified)</p>
+    <label for='rain'>Rain</label>
     <input id='rain' type='checkbox' value='1' name='notifications[rain]'/>
     <br/>
     
-    <label for='snow'>50% chance of snow or higher</label>
+    <label for='snow'>Snow</label>
     <input id='snow' type='checkbox' value='1' name='notifications[snow]'/>
     <br/>
     
@@ -29,11 +29,11 @@
     <input id='wind' type='checkbox' value='1' name='notifications[wind]'/>
     <br/>
     
-    <label for='low-temp'>Temperatures below 50 degrees fahrenheit</label>
+    <label for='low-temp'>High Temperatures</label>
     <input id='low-temp' type='checkbox' value='1' name='notifications[low_temperatures]'/>
     <br/>
     
-    <label for='high-temp'>Temperatures above 100 degrees fahrenheit</label>
+    <label for='high-temp'>Low Temperatures</label>
     <input id='high-temp' type='checkbox' value='1' name='notifications[high_temperatures]'/>
     <br/>
     

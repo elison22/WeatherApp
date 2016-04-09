@@ -9,14 +9,6 @@ $data = $_POST;
 
 if($data) {
 
-	if(!array_key_exists('username', $data)) {
-		error("You must enter your name! Please do so and try again.");
-	}
-	$name = trim($data['username']);
-	if($name === '') {
-		error("Name cannot be blank! Please try again.");	
-	}
-
 	if(!array_key_exists('email', $data)) {
 		error("You must enter your email! Please do so and try again.");
 	}
@@ -30,14 +22,13 @@ if($data) {
 	}
 	$notifications = $data['notifications'];
 
-	$str = "{$email}:::::";
 	foreach($notifications as $n=>$val) {
 		if($val === 1 || $val === '1') {
-			$str .= "{$n}:";
+			file_put_contents("registered/{$n}/email","{$email}\n",FILE_APPEND);
 		}
 	}
 
-	file_put_contents("users/{$name}", $str);
+	die("{$email} is now registered to receive weather notification emails.");
 
 } else {
 	error("Please fill out parts of the form and try again.");
