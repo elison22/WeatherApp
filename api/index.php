@@ -1,12 +1,12 @@
 <?php
-require_once("geonames.php");
-require_once("agrichart.php");
 /**
  * Created by IntelliJ IDEA.
  * User: Thomas
  * Date: 4/9/2016
  * Time: 12:34 AM
  */
+require_once("geonames.php");
+require_once("agrichart.php");
 $response = array();
 $geonames = new geonames();
 $all_data = $geonames->get_json();
